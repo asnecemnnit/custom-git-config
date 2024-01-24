@@ -1,0 +1,23 @@
+[user]
+	name = Ashish Negi
+	email = asnecemnnit@gmail.com
+[includeIf "gitdir:/Users/ashishsingh/bitbucket/"]
+    path = /Users/ashishsingh/custom.gitconfig
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = /Users/ashishsingh/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /private/var/folders/vg/sy0gg69574vcjt98q2ty236r0000gn/T/AppTranslocation/05F6240C-B901-4006-87BE-BF4866D31F9E/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/ashishsingh/.stCommitMsg
+[http]
+	postBuffer = 157286400
+
